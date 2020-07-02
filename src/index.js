@@ -14,8 +14,9 @@ var general_cache_object = {
         max_entries: maximum entries wanted in your cache.
         */
         general_cache_object.create_cache = (cache_name, ttl, max_entries) => {
-            general_cache_object[`${cache_name}`].ttl = ttl;
-            general_cache_object[`${cache_name}`].max_entries = max_entries;
+            general_cache_object[`${cache_name}`] = {};
+            general_cache_object[`${cache_name}`]["ttl"] = ttl;
+            general_cache_object[`${cache_name}`]["max_entries"] = max_entries;
             general_cache_object.number_of_caches += 1;
         };
 
@@ -52,3 +53,8 @@ var general_cache_object = {
         }
     }
 };
+
+
+
+general_cache_object.inIt();
+general_cache_object.create_cache("nisan", 30,20)
