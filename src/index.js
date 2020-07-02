@@ -1,10 +1,6 @@
-var general_cache_object = {"number_of_caches":0};
-
-
-
-// setup all relevant functions and properties.
-function inIt(){
-
+var general_cache_object = {"number_of_caches":0,
+                            // setup all relevant functions and properties.
+                            "inIt":()=>{          
     /*
     create_cache property.
     function that recieves 2 parameters.
@@ -48,13 +44,10 @@ function inIt(){
             return true;
         }
         return false;
-    }
+            }
+        }
+    };
 
-
-}
-
-
-InIt();
 
 
 
