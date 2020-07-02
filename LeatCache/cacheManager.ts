@@ -1,8 +1,7 @@
 import { CacheLeat } from "./cache";
 
-class CacheManagerLeat {
+export class CacheManagerLeat {
     private caches: Map<string, CacheLeat>;
-
 
     constructor() {
         this.caches = new Map();
