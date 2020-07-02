@@ -1,4 +1,4 @@
 # IMC-Leat
 
 
-easy front js component to in-memory caching.
+easy front js component to make in-memory caching easy.
