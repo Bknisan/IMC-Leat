@@ -42,9 +42,9 @@ var general_cache_object = {
         TODO: write documantation
         */
         general_cache_object.delete_cache = (cache_name) => {
-            let cache = general_cache_object.get_cache_by_name[`${cache_name}`];
+            let cache = general_cache_object.get_cache_by_name(cache_name);
 
-            if (cache != null) {
+            if (cache != undefined) {
                 delete general_cache_object[`${cache}`];
                 number_of_caches -= 1;
                 return true;
@@ -57,4 +57,5 @@ var general_cache_object = {
 
 
 general_cache_object.inIt();
-general_cache_object.create_cache("nisan", 30,20)
+general_cache_object.create_cache("nisan", 30,20);
+general_cache_object.delete_cache("nisan");
