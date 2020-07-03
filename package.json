@@ -1,8 +1,8 @@
 {
   "name": "imc-leat",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "in memory front end caching package",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
