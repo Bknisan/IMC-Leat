@@ -19,7 +19,6 @@ export class StatisticsLeat {
     }
 
     inIt(): void {
-        this.cache.
     }
 
 
