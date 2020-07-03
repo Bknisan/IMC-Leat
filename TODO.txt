@@ -1,9 +1,11 @@
 # TODO.
 
-1. document existing functions
+1. document existing functions.
 
-2. append statistics functions/classes
+2. append statistics functions/classes.
 
 3. write tests.
 
-4. append cache functionality
+4. append cache functionality.
+
+5. find how to observe cache.
