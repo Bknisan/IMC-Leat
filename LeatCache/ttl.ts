@@ -31,4 +31,12 @@ export class TTLeat {
         return this.value;
     }
 
+
+    /*
+
+    */
+    setTTL(ttl:number){
+        this.ttl = ttl;
+    }
+
 }

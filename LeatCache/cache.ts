@@ -36,6 +36,13 @@ export class CacheLeat {
 
 
     /*
+    get storage
+    */
+    getStorage() {
+        return this.storage;
+    }
+
+    /*
     get value from cache based on the key.
     if the key ttl reaches to 0 it will be deleted from the cache.
     */
@@ -104,8 +111,31 @@ export class CacheLeat {
         return this.storage.get(key).getTTL();
     }
 
+    /*
+    get cache ttl.
+    */
+    getTTL() {
+        return this.ttl;
+    }
 
 
+
+    /*
+    reset ttl value for all the entries.
+    */
+    resetTTLForAll() {
+        this.storage.forEach((value: TTLeat, key: any) => {
+            this.storage.get(key).setTTL(this.ttl);
+        });
+    }
+
+
+    /*
+    reset ttl value for entry
+    */
+    resetTTLForKey(key:any) {
+        this.storage.get(key).setTTL(this.ttl);
+    }
 
 
 };
