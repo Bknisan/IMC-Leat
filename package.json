@@ -1,6 +1,6 @@
 {
   "name": "imc-leat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "in memory front end caching package",
   "main": "index.ts",
   "scripts": {
