@@ -12,19 +12,17 @@ export class TTLeat {
     }
 
     /*
-
-
+    get ttl of the stored value
     */
 
-    getTTL() {
+    getTTL():number {
         return this.ttl;
     }
 
     /*
-
-
+    get value
     */
-    getValue() {
+    getValue():any {
         if (this.ttl > 0) {
             this.ttl -= 1;
         }
@@ -33,9 +31,9 @@ export class TTLeat {
 
 
     /*
-
+    set ttl of the value
     */
-    setTTL(ttl:number){
+    setTTL(ttl:number):void{
         this.ttl = ttl;
     }
 

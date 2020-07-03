@@ -1,0 +1,9 @@
+# TODO.
+
+1. document existing functions
+
+2. append statistics functions/classes
+
+3. write tests.
+
+4. append cache functionality

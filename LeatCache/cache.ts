@@ -30,7 +30,7 @@ export class CacheLeat {
     /*
     get cache name
     */
-    getName() {
+    getName():string {
         return this.name;
     }
 
@@ -38,7 +38,7 @@ export class CacheLeat {
     /*
     get storage
     */
-    getStorage() {
+    getStorage():Map<any,TTLeat> {
         return this.storage;
     }
 
@@ -46,7 +46,7 @@ export class CacheLeat {
     get value from cache based on the key.
     if the key ttl reaches to 0 it will be deleted from the cache.
     */
-    getValueByKey(key: any) {
+    getValueByKey(key: any):any {
         if (this.storage.has(key)) {
             let valueTTL = this.storage.get(key).getTTL();
             let value = this.storage.get(key).getValue();
@@ -61,7 +61,7 @@ export class CacheLeat {
     /*
     put key, value in the cache only if it's missing.
     */
-    putIfAbsent(key: any, value: any) {
+    putIfAbsent(key: any, value: any):boolean {
         if (this.storage.has(key) == true && this.storage.size < this.maxEntries) {
             this.storage.set(key, new TTLeat(this.ttl, value));
             return true;
@@ -72,7 +72,7 @@ export class CacheLeat {
     /*
     put key, value in the cache even if such a key exists.
     */
-    putOverrideValue(key: any, value: any) {
+    putOverrideValue(key: any, value: any):void {
         if (this.storage.size < this.maxEntries) {
             this.storage.set(key, new TTLeat(this.ttl, value));
         }
@@ -82,7 +82,7 @@ export class CacheLeat {
     /*
     put key, value in the cache even if such a key exists with custom ttl.
     */
-    putOverrideValueCustomTTL(key: any, value: any, ttl: number) {
+    putOverrideValueCustomTTL(key: any, value: any, ttl: number):void {
         if (this.storage.size < this.maxEntries) {
             this.storage.set(key, new TTLeat(ttl, value));
         }
@@ -92,7 +92,7 @@ export class CacheLeat {
     /*
     clear cache.
     */
-    deleteAllEntries() {
+    deleteAllEntries():void {
         this.storage.clear();
     }
 
@@ -100,21 +100,21 @@ export class CacheLeat {
     /*
     delete entry from the cache by the key.
     */
-    deleteByKey(key: any) {
+    deleteByKey(key: any):boolean {
         return this.storage.delete(key);
     }
 
     /*
     get ttl of the entry by the key.
     */
-    getKeyTTL(key: any) {
+    getKeyTTL(key: any):number {
         return this.storage.get(key).getTTL();
     }
 
     /*
     get cache ttl.
     */
-    getTTL() {
+    getTTL():number {
         return this.ttl;
     }
 
@@ -123,7 +123,7 @@ export class CacheLeat {
     /*
     reset ttl value for all the entries.
     */
-    resetTTLForAll() {
+    resetTTLForAll():void {
         this.storage.forEach((value: TTLeat, key: any) => {
             this.storage.get(key).setTTL(this.ttl);
         });
@@ -133,7 +133,7 @@ export class CacheLeat {
     /*
     reset ttl value for entry
     */
-    resetTTLForKey(key:any) {
+    resetTTLForKey(key:any):void {
         this.storage.get(key).setTTL(this.ttl);
     }
 
