@@ -28,7 +28,20 @@ export class CacheManagerLeat {
     */
     createCacheOverride(name: string, ttl: number, maxEntries: number) {
         this.caches.set(name, new CacheLeat(name, ttl, maxEntries));
+        return this.getCache(name);
     }
+
+    /*
+    
+    */
+    createCacheIfAbsent(name: string, ttl: number, maxEntries: number) {
+        if(this.caches.has(name)){
+            return this.getCache(name);
+        }
+        this.caches.set(name, new CacheLeat(name, ttl, maxEntries));
+        return this.getCache(name);
+    }
+    
     /*
 
     */
@@ -36,6 +49,7 @@ export class CacheManagerLeat {
         this.caches.get(name).deleteAllEntries();
         this.caches.delete(name);
     }
+
     /*
 
 

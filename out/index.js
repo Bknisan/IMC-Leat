@@ -9,6 +9,6 @@ var ttl_1 = require("./LeatCache/ttl");
 Object.defineProperty(exports, "TTLeat", { enumerable: true, get: function () { return ttl_1.TTLeat; } });
 let manager = new cacheManager_1.CacheManagerLeat();
 manager.createCacheOverride("nisan", 10, 10);
-let cache = manager.getCache("nisan");
+let cache = manager.getCache("nisa");
 console.log(cache);
 //# sourceMappingURL=index.js.map
