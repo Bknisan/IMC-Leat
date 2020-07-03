@@ -2,10 +2,9 @@ import { TTLeat } from "./ttl";
 
 
 /*
-
-
-
-
+CacheLeat class.
+encapsules all the cache relevant methods.
+store your values by keys.
 */
 export class CacheLeat {
 
