@@ -1,0 +1,22 @@
+{
+  "name": "imc-leat",
+  "version": "1.0.0",
+  "description": "in memory front end caching package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bknisan/IMC-Leat.git"
+  },
+  "keywords": [
+    "cache"
+  ],
+  "author": "Nisan Agabyev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bknisan/IMC-Leat/issues"
+  },
+  "homepage": "https://github.com/Bknisan/IMC-Leat#readme"
+}
