@@ -2,7 +2,7 @@
   "name": "imc-leat",
   "version": "1.0.3",
   "description": "in memory front end caching package",
-  "main": "index.ts",
+  "main": "./index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/Bknisan/IMC-Leat/issues"
   },
-  "homepage": "https://github.com/Bknisan/IMC-Leat#readme"
+  "homepage": "https://github.com/Bknisan/IMC-Leat#readme",
+  "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/mocha": "7.0.2",
+    "chai": "4.2.x",
+    "mocha": "8.0.1",
+    "ts-node": "8.10.2",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "-": "0.0.1"
+  }
 }
