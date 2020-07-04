@@ -1,5 +1,5 @@
-import { CacheLeat } from "../src/LeatCache/cache";
-import { TTLeat } from "../src/LeatCache/ttl";
+import { CacheLeat } from "../LeatCache/cache";
+import { TTLeat } from "../LeatCache/ttl";
 
 
 /*
