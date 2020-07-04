@@ -1,12 +1,9 @@
 import { CacheLeat } from "./cache";
 import { StatisticsLeat } from "./cacheStatistics";
 
-
-
 /*
-
-
-
+CacheManagerLeat class.
+your repository for all caches you create.
 */
 export class CacheManagerLeat {
     private caches: Map<string, StatisticsLeat>;
