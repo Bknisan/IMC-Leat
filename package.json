@@ -1,6 +1,6 @@
 {
   "name": "imc-leat",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "in memory front end caching package",
   "main": "./index.ts",
   "scripts": {
@@ -25,8 +25,7 @@
     "chai": "4.2.x",
     "mocha": "8.0.1",
     "ts-node": "8.10.2",
-    "typescript": "^3.9.6",
-    "rxjs": "6.6.0"
+    "typescript": "^3.9.6"
   },
   "dependencies": {
     "-": "0.0.1"
